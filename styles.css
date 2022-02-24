@@ -222,3 +222,15 @@ h5{
         
     }
 }
+@media (max-width:800px) {
+    .nav {
+        width: 95%;     
+    }
+    .card-holder {
+        width: 95%;
+    }
+    .total-div{
+        width: 95%;
+        
+    }
+}
