@@ -1,7 +1,7 @@
 body{
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    background-color:white;
+    background-color:#f1f5f8;
     margin: 0;
     padding: 0;
 
@@ -151,6 +151,7 @@ h5{
     border: none;
     text-align: center;
     width: 20px;
+    background-color: #f1f5f8;
 }
 .total-div{
     width: 45%;
