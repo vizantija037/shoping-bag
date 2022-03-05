@@ -111,6 +111,7 @@ btnsArr.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     let id = e.target.dataset.id;
     let bagCounter = document.getElementById("bag-counter");
+    bagCounter.value --;
     let currentValue = document.querySelectorAll(".remove-btn");
     document.getElementById(`card-${id}`).style.display = "none";
   });
@@ -140,6 +141,26 @@ let pricesArr = content.map((item) => {
 });
 let total = pricesArr.reduce((a, b) => a + b);
 let sum = Math.round(total*100)/100
-document.getElementById("total").innerHTML = `$ ${total}`;
+document.getElementById("total").innerHTML = `$ ${sum}`;
 
 console.log(sum)
+
+window.addEventListener('load', toFetch);
+
+function toFetch (){
+  fetch('https://api.tvmaze.com/episodes/1')
+  .then(resp => resp.json())
+  .then(data=>{
+    
+    localStorage.setItem('myObject', JSON.stringify(data) )
+})
+}
+
+
+
+
+
+let mySeries = localStorage.getItem('myObject')
+let obj = JSON.parse(mySeries)
+console.log(obj)
+
